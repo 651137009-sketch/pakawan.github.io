@@ -2,8 +2,9 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ClassHero | สื่อการเรียนรู้ดิจิทัล & AR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
     body {
       margin: 0;
@@ -11,134 +12,188 @@
       background: #f5f7fa;
       color: #333;
     }
+
     header {
       background: #0a2540;
-      color: #fff;
-      padding: 20px 40px;
+      color: white;
+      padding: 20px 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
     nav a {
-      color: #fff;
+      color: white;
       margin-left: 20px;
       text-decoration: none;
       font-weight: 500;
     }
-    section {
-      padding: 60px 40px;
-    }
+
     .hero {
       background: linear-gradient(120deg, #0a2540, #1e3a8a);
-      color: #fff;
+      color: white;
       text-align: center;
+      padding: 100px 20px;
     }
-    .hero h1 {
+
+    .hero h2 {
       font-size: 42px;
       margin-bottom: 20px;
     }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
     .btn {
+      display: inline-block;
+      margin-top: 30px;
       background: #38bdf8;
       color: #000;
-      padding: 12px 24px;
-      border-radius: 6px;
+      padding: 14px 30px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      margin: 10px;
-      display: inline-block;
     }
+
+    section {
+      padding: 70px 60px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: #0a2540;
+    }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
     }
+
     .card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      text-align: center;
     }
+
+    .card h3 {
+      margin-top: 0;
+      color: #1e3a8a;
+    }
+
     footer {
       background: #0a2540;
-      color: #fff;
+      color: white;
       text-align: center;
-      padding: 20px;
+      padding: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <h2>ClassHero</h2>
-    <nav>
-      <a href="#home">หน้าแรก</a>
-      <a href="#about">เกี่ยวกับเรา</a>
-      <a href="#products">สินค้า</a>
-      <a href="#how">วิธีใช้งาน</a>
-      <a href="#contact">ติดต่อ</a>
-    </nav>
-  </header>
+<header>
+  <h1>ClassHero</h1>
+  <nav>
+    <a href="#">หน้าแรก</a>
+    <a href="#">สินค้า</a>
+    <a href="#">เกี่ยวกับเรา</a>
+    <a href="#">ติดต่อ</a>
+  </nav>
+</header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <h1>เปลี่ยนห้องเรียนธรรมดา<br>ให้เป็นห้องเรียนแห่งอนาคต</h1>
-    <p>สื่อการเรียนรู้ดิจิทัล & AR ที่ช่วยให้นักเรียนเข้าใจง่าย สนุก และเรียนรู้เชิงลึก</p>
-    <a href="#products" class="btn">ดูสินค้า</a>
-    <a href="#contact" class="btn">ขอ Demo</a>
-  </section>
+<section class="hero">
+  <h2>เปลี่ยนห้องเรียนธรรมดา<br>ให้เป็นห้องเรียนแห่งอนาคต</h2>
+  <p>
+    สื่อการเรียนรู้ดิจิทัล & AR ที่ช่วยให้นักเรียนเข้าใจง่าย
+    ครูสอนสนุก และสร้างประสบการณ์การเรียนรู้ยุคใหม่
+  </p>
+  <a href="#" class="btn">ขอทดลองใช้สื่อ</a>
+</section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>เกี่ยวกับเรา</h2>
-    <p>
-      ClassHero คือบริษัทธุรกิจการศึกษาที่พัฒนาสื่อการเรียนรู้ดิจิทัลและ AR
-      เพื่อช่วยให้ครูสอนง่าย และนักเรียนเรียนรู้ได้อย่างมีประสิทธิภาพ
-    </p>
-  </section>
+<section>
+  <h2 class="section-title">สินค้าและบริการ</h2>
 
-  <!-- Products -->
-  <section id="products">
-    <h2>สินค้าและบริการ</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>สื่อการเรียนรู้แบบ AR</h3>
-        <p>เรียนรู้ผ่านโมเดล 3 มิติ เสริมความเข้าใจเชิงลึก</p>
-      </div>
-      <div class="card">
-        <h3>Interactive Learning</h3>
-        <p>กิจกรรมโต้ตอบ เกมการเรียนรู้ และใบงานดิจิทัล</p>
-      </div>
-      <div class="card">
-        <h3>ชุดสื่อประกอบการสอน</h3>
-        <p>สอดคล้องหลักสูตร ใช้งานได้ทันทีในห้องเรียน</p>
-      </div>
+  <div class="grid">
+    <div class="card">
+      <h3>สื่อการเรียนรู้แบบ AR</h3>
+      <p>
+        เรียนรู้ผ่านโมเดล 3 มิติ
+        เห็นภาพจริง เข้าใจง่าย เพิ่มการมีส่วนร่วมของนักเรียน
+      </p>
     </div>
-  </section>
 
-  <!-- How it works -->
-  <section id="how">
-    <h2>วิธีการใช้งาน</h2>
-    <ol>
-      <li>สแกน QR Code</li>
-      <li>เปิดสื่อ AR / Interactive</li>
-      <li>เรียนรู้ผ่านกิจกรรม</li>
-      <li>ทำแบบประเมินผล</li>
-    </ol>
-  </section>
+    <div class="card">
+      <h3>Interactive Learning</h3>
+      <p>
+        กิจกรรมโต้ตอบ เกมการเรียนรู้
+        และใบงานดิจิทัลที่ช่วยพัฒนาทักษะคิดวิเคราะห์
+      </p>
+    </div>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>ติดต่อเรา</h2>
-    <p>สนใจสื่อการเรียนรู้ หรือขอทดลองใช้งาน</p>
-    <p>Email: info@classhero.co.th | โทร: 0X-XXX-XXXX</p>
-    <a href="#" class="btn">แอด Line OA</a>
-  </section>
+    <div class="card">
+      <h3>ชุดสื่อพร้อมใช้ในห้องเรียน</h3>
+      <p>
+        สอดคล้องหลักสูตร
+        ใช้งานง่าย ครูไม่ต้องมีพื้นฐานเทคโนโลยี
+      </p>
+    </div>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 ClassHero Education Co., Ltd.</p>
-  </footer>
+<section style="background:#eef2ff;">
+  <h2 class="section-title">ทำไมต้อง ClassHero</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>✔ สอดคล้องหลักสูตร</h3>
+      <p>ออกแบบเพื่อการเรียนการสอนจริงในโรงเรียน</p>
+    </div>
+    <div class="card">
+      <h3>✔ ใช้งานง่าย</h3>
+      <p>สแกน QR ก็เริ่มเรียนรู้ได้ทันที</p>
+    </div>
+    <div class="card">
+      <h3>✔ เพิ่ม Active Learning</h3>
+      <p>นักเรียนมีส่วนร่วม สนุก และจดจำได้ดีกว่า</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">ติดต่อเรา</h2>
+  <p style="text-align:center;">
+    📧 Email: classhero@email.com <br>
+    📱 Line OA: @classhero
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 ClassHero Education Co., Ltd.</p>
+</footer>
 
 </body>
 </html>
